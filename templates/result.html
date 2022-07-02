@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+</head>
+
+<body style="background-image: url({{ url_for('static', filename='bg.jpg') }})">
+<!--<p style="background-image: url('bg.JPG');"></p>-->
+<div class="jumbotron text-center">
+    <h1>Pothole Detection</h1>
+</div>
+<br>
+<div class="container">
+<button ><a href="/home">Home</a> </button>
+    <button><a href="/log">Login</a> </button>
+
+</div>
+<br>
+<br>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Sl No.</th>
+            <th>Road Name</th>
+            <th>Damage in %</th>
+            <th>Sample Images</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for row in rows %}
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td><a href="/view/{{row[1]}}">View</a> </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
