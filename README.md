@@ -1,6 +1,6 @@
 # Pothole-Detection-System
 
-##Overview
+# Overview
 Potholes are an unavoidable obstacle that all motorists in India face, once the
 rains have begun which carry on growing day by day. Unfortunately, there is no
 system to pin point the exact location of potholes, moreover fixing them is labor
